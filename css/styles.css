@@ -5,12 +5,13 @@
 }
 
 .header {
-    min-height: 100%;
+    min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(125, 127, 131, 0.7), rgba(125, 127, 131, 0.7)), url(../images/Web\ EK\ logo.png);
+    background-image: /*linear-gradient(rgba(125, 127, 131, 0.7), rgba(125, 127, 131, 0.7)),*/ url(../images/Web\ Tupper.jpg);
     background-position: center;
-    background-size: cover;
-    position: relative;
+    background-size: 100%;
+    position: cover;
+    background-repeat: no-repeat;
 }
 
 nav {
@@ -20,9 +21,9 @@ nav {
     align-items: center;
 }
 
-nav img {
+/* nav img {
     width: 200px;
-}
+} */
 
 .nav-links {
     flex: 1;
@@ -37,16 +38,17 @@ nav img {
 }
 
 .nav-links ul li a {
-    color: fff;
+    color: black;
     text-decoration: none;
     font-size: 13px;
+    text-transform: uppercase;
 }
 
 .nav-links ul li::after {
     content: "";
     width: 0%;
     height: 2px;
-    background: #f44336;
+    background: black;
     display: block;
     margin: auto;
     transition: 0.5sec;
@@ -54,4 +56,63 @@ nav img {
 
 .nav-links ul li:hover::after {
     width: 100%;
+}
+
+.text-box {
+    width: 90%;
+    color: black;
+    position: absolute;
+    top: 40%;
+    left: 57%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+.text-box h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 7px;
+}
+
+.text-box p {
+    margin: 5px 0 40px;
+    font-size: 33px;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 5px;
+    /* Fade in transition */
+    /* -webkit-transition: opacity 2s ease-in;
+    -moz-transition: opacity 2s ease-in;
+    -o-transition: opacity 2s ease-in;
+    -ms-transition: opacity 2s ease-in;
+    transition: opacity 2s ease-in; */
+}
+
+a {
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.lets-chat {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 12px 40px;
+    font-size: 20px;
+    letter-spacing: 5px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.lets-chat:hover {
+    border: 1px solid white;
+    background: rgb(0, 0, 0);
+    transition: 0.5s;
+    color: white;
 }
